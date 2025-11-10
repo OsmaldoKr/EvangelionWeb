@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tienda Evangelion</title>
+  <title>Tienda Evangelion | Nina Store</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/eva.css"> <!-- Agrega el CSS del formulario -->
   <link rel="shortcut icon" href="img/almacenar.png" type="image/x-icon">
 </head>
 <body>
+  <!-- Encabezado y navegación -->
   <header>
     <h1>Nina Store</h1>
     <p>Equipamiento, recuerdos y tecnología NERV</p>
@@ -17,6 +19,7 @@
     <a href="index.html">Inicio</a>
     <a href="#catalogo">Modelos EVA</a>
     <a href="#footer-container">Contacto</a>
+    <a href="#pedido-eva">Pedido EVA</a> <!-- Nuevo enlace al formulario -->
   </nav>
 
   <main>
@@ -28,7 +31,6 @@
           Proveer a los fans de Evangelion una experiencia inmersiva a través de colecciones exclusivas,
           artículos personalizados y una estética fiel al universo NERV.
         </p>
-
         <h3>Visión</h3>
         <p>
           Ser la tienda virtual de referencia para la comunidad Evangelion en Latinoamérica,
@@ -36,32 +38,58 @@
         </p>
       </div>
 
-      <h2>Modelos EVA Destacados</h2>
+      <h2 id="catalogo">Modelos EVA Destacados</h2>
       <div class="catalogo">
         <div class="tarjeta">
           <img src="img/eva-1-e1561068576500-720x453.webp" alt="EVA-01">
           <h4>EVA-01</h4>
           <p>Unidad principal de Shinji Ikari. Famosa por su modo berserk y su conexión orgánica con su piloto.</p>
         </div>
-
         <div class="tarjeta">
           <img src="img/eva02.jpg" alt="EVA-02">
           <h4>EVA-02</h4>
           <p>Unidad de combate creada en Alemania. Piloteada por Asuka Langley Soryu, símbolo de poder y orgullo.</p>
         </div>
-
         <div class="tarjeta">
           <img src="img/mecha-portrait-eva-00-blue-and-yellow-versions-v0-bhrzzmp8fzyb1.jpg" alt="EVA-00">
           <h4>EVA-00</h4>
           <p>Prototipo experimental, pilotado por Rei Ayanami. Es la primera unidad Evangelion funcional.</p>
         </div>
-
         <div class="tarjeta">
           <img src="img/03.webp" alt="EVA-03">
           <h4>EVA-03</h4>
           <p>Unidad experimental corrompida por un Ángel. Representa el conflicto entre control y destino.</p>
         </div>
       </div>
+    </section>
+
+    <section id="pedido-eva">
+      <h2>Realiza tu Pedido EVA Personalizado</h2>
+      <form id="formPedidoEva">
+        <label for="nombre">Nombre del cliente:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" />
+
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" placeholder="correo@nina.store" />
+
+        <label for="modelo">Modelo EVA deseado:</label>
+        <select id="modelo" name="modelo">
+          <option value="">Selecciona...</option>
+          <option value="eva-01">EVA-01</option>
+          <option value="eva-02">EVA-02</option>
+          <option value="eva-00">EVA-00</option>
+          <option value="eva-03">EVA-03</option>
+        </select>
+
+        <label>
+          <input type="checkbox" id="noticias" name="noticias" />
+          Quiero recibir noticias y descuentos NERV.
+        </label>
+
+        <button type="submit" id="btnEnviar">Enviar Pedido</button>
+        <button type="button" id="btnLimpiar">Limpiar Campos</button>
+      </form>
+      <div id="mensaje"></div>
     </section>
 
     <aside>
@@ -74,20 +102,18 @@
     </aside>
   </main>
 
-    <footer>
-    <div class="footer-container">
+  <footer>
+    <div class="footer-container" id="footer-container">
       <div class="footer-col">
         <h3>NINA STORE</h3>
         <p>Inspirado en el legado de NERV y SEELE.</p>
       </div>
-
       <div class="footer-col">
         <h3>Horario de Atención</h3>
         <p>Lunes a Viernes: 9:00 AM - 6:00 PM</p>
         <p>Sábados: 10:00 AM - 2:00 PM</p>
         <p>Domingos: Cerrado</p>
       </div>
-
       <div class="footer-col">
         <h3>Ubicación</h3>
         <p>Chinandega - Nicaragua </p>
@@ -95,11 +121,10 @@
         <p>Tel: +505 7895 5264</p>
       </div>
     </div>
-
     <div class="footer-bottom">
       <p>&copy; 2025 NERV Corporation. Proyecto autorizado por SEELE.</p>
     </div>
   </footer>
-
+  <script src="eva.js"></script>
 </body>
 </html>

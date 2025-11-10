@@ -1,0 +1,89 @@
+body {
+    background: #23274e;
+    font-family: Arial, sans-serif;
+    color: #dde7ff;
+    padding: 40px;
+}
+
+h2 {
+    text-align: center;
+    color: #ae2539;
+}
+
+form {
+    max-width: 380px;
+    margin: 0 auto;
+    background: #2d315c;
+    padding: 24px 18px;
+    border-radius: 16px;
+    box-shadow: 0 8px 22px rgba(174,37,57,0.15);
+    transition: box-shadow 0.3s;
+}
+
+form:hover {
+    box-shadow: 0 8px 40px #ae2539dd;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    color: #e94063;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 7px;
+    margin-top: 5px;
+    border: 1px solid #8f99c8;
+    border-radius: 5px;
+    background: #24284d;
+    color: #e6e8f3;
+    transition: border-color 0.3s;
+}
+
+input:focus,
+select:focus {
+    border-color: #ae2539;
+    background: #232855;
+}
+
+button {
+    display: inline-block;
+    margin-top: 19px;
+    margin-right: 8px;
+    padding: 10px 22px;
+    background: #ae2539;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.18s, transform 0.13s;
+}
+
+button:hover {
+    background: #e94063;
+    transform: scale(1.08);
+}
+
+#mensaje {
+    width: 100%;
+    min-height: 24px;
+    text-align: center;
+    margin-top: 24px;
+    font-size: 16px;
+    color: #ffecb3;
+    font-weight: bold;
+}
+
+input[type="checkbox"]:focus {
+    outline: 2px solid #e94063;
+}
+
+select option {
+    background: #23274e;
+    color: #dde7ff;
+}
